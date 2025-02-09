@@ -1,6 +1,6 @@
 // ClauseSetPool.hpp  
 //
-// Clause Set Pool for NDP-4.5.5
+// Clause Set Pool for NDP-4.5.7
 //
 // Copyright (c) 2025 GridSAT Stiftung
 //
@@ -22,7 +22,7 @@
 //
 // +++ READ.me +++
 // 
-// Save to working directory of NDP-4.5.5
+// Save to working directory of NDP-4.5.7
 //   
 #ifndef CLAUSE_SET_POOL_HPP
 #define CLAUSE_SET_POOL_HPP
