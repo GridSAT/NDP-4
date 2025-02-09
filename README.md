@@ -1,8 +1,8 @@
 # Non-deterministic Processor (NDP) - Parallel SAT-Solver with OpenMP
 
 This NDP is an efficient parallel SAT-Solver. It parses DIMACS, factorizes, and performs parallel searches using BFS (Breadth-First Search) and DFS (Depth-First Search) techniques.  
-`NDP 4.5.5` supports custom configuration through command-line options, utilizes multi-threading via OpenMP, and outputs results to a dynamically generated file name based on the input parameters saving results to a dynamically generated file name based on the input parameters and the current UTC time.
-Version `4.5.5` now with with Profiling.
+`NDP 4.5.7` supports custom configuration through command-line options, utilizes multi-threading via OpenMP, and outputs results to a dynamically generated file name based on the input parameters saving results to a dynamically generated file name based on the input parameters and the current UTC time.
+Version `4.5.7` now with with Profiling.
 
 ## Requirements
 
@@ -41,14 +41,14 @@ Ensure to have `ClauseSetPool.hpp` in the working directory.
 
 To compile the program on Linux (tested on `Ubuntu 24.04.1 LTS`), use the following command:
 ```bash
-g++ -fopenmp -std=c++17 -Ofast -march=native -mtune=native -fomit-frame-pointer -funroll-loops -fprefetch-loop-arrays -flto=auto -ffast-math -static-libgcc -static-libstdc++ -o NDP-4_5_5 NDP-4_5_5.cpp -lgmpxx -lgmp -lstdc++fs
+g++ -fopenmp -std=c++17 -Ofast -march=native -mtune=native -fomit-frame-pointer -funroll-loops -fprefetch-loop-arrays -flto=auto -ffast-math -static-libgcc -static-libstdc++ -o NDP-4_5_7 NDP-4_5_7.cpp -lgmpxx -lgmp -lstdc++fs
 ```
 
 ## CLI usage
 
 Once compiled, the program can be run from the command line using the following format:
 ```bash
-./NDP-4_5_5 <dimacs_file> [-d depth | -t max_tasks | -q max_queue_size | -r reserved cores] [-o output_directory]
+./NDP-4_5_7 <dimacs_file> [-d depth | -t max_tasks | -q max_queue_size | -r reserved cores] [-o output_directory]
 ```
 
 ###	Command-Line Options:
@@ -61,7 +61,7 @@ Once compiled, the program can be run from the command line using the following 
 `-o` output_directory: Specify a custom output directory for the result files. (Optional)
 
 Basic execution with nodes (example):  
-`Basic execution: ./NDP-4_5_5 inputs/RSA/rsaFACT-24bit.dimacs`  
+`Basic execution: ./NDP-4_5_7 inputs/RSA/rsaFACT-24bit.dimacs`  
 
 This will run the program using the default settings for BFS and DFS and output the results to the current working directory.
 	
@@ -74,13 +74,13 @@ This will run the program using the default settings for BFS and DFS and output 
   
 
 ### Customization:  
-Setting a custom depth: `./NDP-4_5_5 inputs/RSA/rsaFACT-24bit.dimacs -d 5000`
+Setting a custom depth: `./NDP-4_5_7 inputs/RSA/rsaFACT-24bit.dimacs -d 5000`
 
-Limiting the number of tasks: `./NDP-4_5_5 inputs/RSA/rsaFACT-24bit.dimacs -t 1000`
+Limiting the number of tasks: `./NDP-4_5_7 inputs/RSA/rsaFACT-24bit.dimacs -t 1000`
 
-Setting a custom Queue Size: `./NDP-4_5_5 inputs/RSA/rsaFACT-24bit.dimacs -q 256`
+Setting a custom Queue Size: `./NDP-4_5_7 inputs/RSA/rsaFACT-24bit.dimacs -q 256`
 
-Saving results to a specific directory: `./NDP-4_5_5 inputs/RSA/rsaFACT-24bit.dimacs -o /path/to/output`
+Saving results to a specific directory: `./NDP-4_5_7 inputs/RSA/rsaFACT-24bit.dimacs -o /path/to/output`
 
 
 ## Monitoring
@@ -93,7 +93,7 @@ htop
 ## Output
 
 The output file will be saved in the format: 
-`NDP-4_5_5_rsaFACT13688e7-24bit_8dfcb_auto_r0.txt`  
+`NDP-4_5_7_rsaFACT13688e7-24bit_8dfcb_auto_r0.txt`  
 (no cli option for Depth/#Tasks/Queue Size, no reserved cores)
 
 ## NOTE:
