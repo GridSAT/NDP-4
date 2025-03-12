@@ -2,7 +2,11 @@
 
 This NDP is an efficient parallel SAT-Solver. It parses DIMACS, factorizes, and performs parallel searches using BFS (Breadth-First Search) and DFS (Depth-First Search) techniques.  
 `NDP 4.5.7` supports custom configuration through command-line options, utilizes multi-threading via OpenMP, and outputs results to a dynamically generated file name based on the input parameters saving results to a dynamically generated file name based on the input parameters and the current UTC time.
-Version `4.5.7` now with with Profiling.
+Version `4.5.7` now with with Profiling.  
+
+`NDP-4_5_7.cpp` [IPFS CID](https://ipfs.tech): `QmTFJ9PXHDxf7hPYBJbQo7azpwAocXjj1e91gjosWg5Dwh`  
+`ClauseSetPool.hpp` [IPFS CID](https://ipfs.tech): `QmSyx6AiarRDKVs2LRUQivtnjiUiYpbqvA39odWujd7Pep`  
+
 
 ## Requirements
 
